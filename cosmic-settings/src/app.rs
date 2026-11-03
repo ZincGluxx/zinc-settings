@@ -2,8 +2,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
 use crate::PageCommands;
-#[cfg(feature = "page-input")]
-use crate::{KeyboardCommands, ShortcutsCommands};
 use crate::config::Config;
 #[cfg(feature = "page-accessibility")]
 use crate::pages::accessibility;
@@ -23,6 +21,8 @@ use crate::pages::sound;
 use crate::pages::{self, applications, system, time};
 use crate::subscription::desktop_files;
 use crate::widget::{page_title, search_header};
+#[cfg(feature = "page-input")]
+use crate::{KeyboardCommands, ShortcutsCommands};
 use cosmic::app::context_drawer::ContextDrawer;
 use cosmic::app::{Core, Task};
 #[cfg(feature = "wayland")]
@@ -31,7 +31,7 @@ use cosmic::iced::event::{self, PlatformSpecific};
 use cosmic::iced::{self, Length, Subscription, keyboard, window};
 use cosmic::prelude::*;
 use cosmic::widget::{
-    button, column, container, icon, id_container, nav_bar, row, scrollable, segmented_button,
+    button, column, container, flex_row, icon, id_container, nav_bar, scrollable, segmented_button,
     settings, text_input,
 };
 use cosmic::{Element, surface};
@@ -111,7 +111,9 @@ impl SettingsApp {
                 }
                 Some(KeyboardCommands::Shortcuts {
                     command: Some(ShortcutsCommands::Custom),
-                }) => self.pages.page_id::<input::keyboard::shortcuts::custom::Page>(),
+                }) => self
+                    .pages
+                    .page_id::<input::keyboard::shortcuts::custom::Page>(),
             },
             #[cfg(feature = "page-legacy-applications")]
             PageCommands::LegacyApplications => self
@@ -1108,16 +1110,17 @@ impl SettingsApp {
                 Message::Page(parent),
             );
 
-            let mut page_header_content: cosmic::iced::widget::Row<'_, Message, Theme> =
-                row::with_capacity(2)
-                    .align_y(iced::Alignment::End)
-                    .push(page_header);
+            let mut page_header_content = vec![page_header];
 
             if let Some(element) = page.header_view() {
-                page_header_content = page_header_content.push(element.map(Message::from));
+                page_header_content.push(element.map(Message::from));
             }
 
-            page_header_content.into()
+            flex_row(page_header_content)
+                .width(Length::Fill)
+                .align_items(iced::Alignment::End)
+                .justify_content(cosmic::widget::JustifyContent::SpaceBetween)
+                .into()
         } else {
             cosmic::widget::text::title3(&page_info.title).into()
         };
