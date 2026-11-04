@@ -441,6 +441,12 @@ window-management-appearance = Window management
     .active-hint = Active window hint size
     .gaps = Gaps around tiled windows
 
+decoration-preference = Window Decoration Preference
+    .client-side = Prefer Client-Side Decoration
+    .client-side-desc = Request that clients render their own window decorations.
+    .server-side = Prefer Server-Side Decoration
+    .server-side-desc = Request uniform compositor-renderered window decorations on supported clients.
+
 ### Experimental
 
 experimental-settings = Experimental settings

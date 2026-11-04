@@ -27,6 +27,9 @@ use cosmic::widget::text_input::focus;
 use cosmic::widget::{button, container, row, settings, text};
 use cosmic::{Apply, Element, Task, task, widget};
 #[cfg(feature = "wayland")]
+use cosmic_comp_config::DecorationPreference;
+use cosmic_config::ConfigGet;
+#[cfg(feature = "wayland")]
 use cosmic_panel_config::CosmicPanelConfig;
 use cosmic_settings_page::{self as page, Section, section};
 use ron::ser::PrettyConfig;
@@ -61,8 +64,12 @@ pub struct Page {
     roundness: Roundness,
     density: Density,
 
+    #[cfg(feature = "wayland")]
+    decoration_preference: DecorationPreference,
+
     theme_manager: theme_manager::Manager,
 
+    comp_config: Config,
     tk_config: Option<Config>,
     day_time: bool,
 }
@@ -75,6 +82,9 @@ impl Default for Page {
 
 impl From<theme_manager::Manager> for Page {
     fn from(theme_manager: theme_manager::Manager) -> Self {
+        let comp_config = cosmic_config::Config::new("com.system76.CosmicComp", 1).unwrap();
+        #[cfg(feature = "wayland")]
+        let decoration_preference = comp_config.get("decoration_preference").unwrap_or_default();
         let tk_config = CosmicTk::config().ok();
         let theme_mode = theme_manager.mode();
         let theme_builder = theme_manager.builder().clone();
@@ -92,6 +102,9 @@ impl From<theme_manager::Manager> for Page {
             roundness: theme_builder.corner_radii.into(),
             density: cosmic::config::interface_density(),
             theme_manager,
+            #[cfg(feature = "wayland")]
+            decoration_preference,
+            comp_config,
             tk_config,
             day_time: true,
         }
@@ -166,6 +179,8 @@ pub enum Message {
     FrostedApplets(bool),
     FrostedSystemInterface(bool),
     FrostedWindows(bool),
+    #[cfg(feature = "wayland")]
+    SetDecorationPreference(DecorationPreference),
 }
 
 impl From<Message> for crate::app::Message {
@@ -598,6 +613,15 @@ impl Page {
                 });
                 tasks.push(self.drawer.update_frosted_applets(v));
             }
+            Message::SetDecorationPreference(preference) => {
+                self.decoration_preference = preference;
+                if let Err(err) = self
+                    .comp_config
+                    .set("decoration_preference", self.decoration_preference)
+                {
+                    tracing::error!(?err, "Failed to set config 'decoration_preference'");
+                }
+            }
         }
 
         let mut tasks = cosmic::Task::batch(tasks);
@@ -697,6 +721,8 @@ impl page::Page<crate::pages::Message> for Page {
             sections.insert(style::section()),
             sections.insert(interface_density()),
             sections.insert(window_management()),
+            #[cfg(feature = "wayland")]
+            sections.insert(decoration_preference()),
             sections.insert(experimental()),
             sections.insert(reset_button()),
         ])
@@ -840,6 +866,45 @@ pub fn window_management() -> Section<crate::pages::Message> {
                         500,
                         Message::GapSize,
                     )),
+                )
+                .apply(Element::from)
+                .map(crate::pages::Message::Appearance)
+        })
+}
+
+#[cfg(feature = "wayland")]
+pub fn decoration_preference() -> Section<crate::pages::Message> {
+    crate::slab!(descriptions {
+        client_side = fl!("decoration-preference", "client-side");
+        client_side_desc = fl!("decoration-preference", "client-side-desc");
+        server_side = fl!("decoration-preference", "server-side");
+        server_side_desc = fl!("decoration-preference", "server-side-desc");
+    });
+
+    Section::default()
+        .title(fl!("decoration-preference"))
+        .descriptions(descriptions)
+        .view::<Page>(move |_binder, page, section| {
+            let descriptions = &section.descriptions;
+            settings::section()
+                .title(&section.title)
+                .add(
+                    settings::item::builder(&descriptions[client_side])
+                        .description(&descriptions[client_side_desc])
+                        .radio(
+                            DecorationPreference::ClientSide,
+                            Some(page.decoration_preference),
+                            Message::SetDecorationPreference,
+                        ),
+                )
+                .add(
+                    settings::item::builder(&descriptions[server_side])
+                        .description(&descriptions[server_side_desc])
+                        .radio(
+                            DecorationPreference::ServerSide,
+                            Some(page.decoration_preference),
+                            Message::SetDecorationPreference,
+                        ),
                 )
                 .apply(Element::from)
                 .map(crate::pages::Message::Appearance)
