@@ -1,6 +1,6 @@
-# COSMIC Settings
+# Zinc Settings
 
-The settings application for the [COSMIC desktop environment][cosmic-epoch].
+The settings application for the [Zinc desktop environment][cosmic-epoch].
 
 ## Translators
 
@@ -11,7 +11,7 @@ Translations must go through Weblate at https://hosted.weblate.org/projects/pop-
 We will accept pull requests for distro-specific features and pages.
 Make them compile conditionally with a [cargo feature][cargo-feature].
 
-The accent palettes on the Appearance settings page are configurable through the cosmic-config directory at `/usr/share/cosmic/com.system76.CosmicSettings/v1/`. One at `accent_palette_dark`, and another at `accent_palette_light`. Examples can be found at [resources/accent_palette_dark.ron](./resources/accent_palette_dark.ron) and [resources/accent_palette_light.ron](./resources/accent_palette_light.ron). This can be copied locally to `~/.config/cosmic/com.system76.CosmicSettings/v1/` for testing, and then move to `/usr/share/cosmic` for packaging.
+The accent palettes on the Appearance settings page are configurable through the cosmic-config directory at `/usr/share/cosmic/com.system76.ZincSettings/v1/`. One at `accent_palette_dark`, and another at `accent_palette_light`. Examples can be found at [resources/accent_palette_dark.ron](./resources/accent_palette_dark.ron) and [resources/accent_palette_light.ron](./resources/accent_palette_light.ron). This can be copied locally to `~/.config/cosmic/com.system76.ZincSettings/v1/` for testing, and then move to `/usr/share/cosmic` for packaging.
 
 ## Build
 
@@ -21,7 +21,7 @@ See the `Build-Depends` section of the [debian control file](./debian/control).
 
 ### Install
 
-COSMIC uses [just][just] as its preferred build tool.
+Zinc uses [just][just] as its preferred build tool.
 
 ```sh
 just
@@ -61,7 +61,7 @@ Any contribution intentionally submitted for inclusion in the work by you shall 
 ```
 
 [cargo-feature]: https://doc.rust-lang.org/cargo/reference/features.html
-[cosmic-epoch]: https://github.com/pop-os/cosmic-epoch
+[cosmic-epoch]: https://github.com/ZincGluxx/zinc-desktop
 [just]: https://github.com/casey/just
 [rustup]: https://rustup.rs/
 [rust-analyzer]: https://rust-analyzer.github.io/

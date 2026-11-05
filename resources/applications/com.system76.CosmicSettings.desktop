@@ -1,11 +1,11 @@
 [Desktop Entry]
-Name=COSMIC Settings
-Comment=Settings application for COSMIC.
+Name=Zinc Settings
+Comment=Settings application for Zinc.
 Type=Application
 Exec=cosmic-settings
 Terminal=false
 Categories=COSMIC
-Keywords=COSMIC;Settings;
+Keywords=Zinc;Settings;
 OnlyShowIn=COSMIC
 Icon=com.system76.CosmicSettings
 StartupNotify=true

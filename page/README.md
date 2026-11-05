@@ -1,4 +1,4 @@
-# cosmic-settings-page
+# zinc-settings-page
 
 This module contains the APIs for creating and managing settings pages.
 

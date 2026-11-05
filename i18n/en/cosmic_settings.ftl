@@ -6,135 +6,135 @@ number = { $number }
 
 ## Freedesktop desktop entries
 
-app = COSMIC Settings
-xdg-entry-comment = Settings application for the COSMIC desktop
-xdg-entry-keywords = COSMIC;Settings;
+app = Zinc Settings
+xdg-entry-comment = Settings application for the Zinc desktop
+xdg-entry-keywords = Zinc;Settings;
 
 xdg-entry-about = About
 xdg-entry-about-comment = Device name, hardware information, operating system defaults
-xdg-entry-about-keywords = COSMIC;About
+xdg-entry-about-keywords = Zinc;About
 
 xdg-entry-a11y = Accessibility
 xdg-entry-a11y-comment = Screen reader, magnifier, high contrast, and color filters
-xdg-entry-a11y-keywords = COSMIC;Accessibility;A11y;Screen;Reader;Magnifier;Contrast;Color;
+xdg-entry-a11y-keywords = Zinc;Accessibility;A11y;Screen;Reader;Magnifier;Contrast;Color;
 
 xdg-entry-appearance = Appearance
 xdg-entry-appearance-comment = Accent colors and theming
-xdg-entry-appearance-keywords = COSMIC;Accent;Color;Icon;Font;Theme
+xdg-entry-appearance-keywords = Zinc;Accent;Color;Icon;Font;Theme
 
 xdg-entry-applications = Applications
 xdg-entry-applications-comment = Default applications, startup applications, and X11 application compatibility settings
-xdg-entry-applications-keywords = COSMIC;Default;Application;Startup;X11;Compatibility
+xdg-entry-applications-keywords = Zinc;Default;Application;Startup;X11;Compatibility
 
 xdg-entry-bluetooth-comment = Manage Bluetooth devices
-xdg-entry-bluetooth-keywords = COSMIC;Bluetooth;
+xdg-entry-bluetooth-keywords = Zinc;Bluetooth;
 
 xdg-entry-date-time = Date & Time
 xdg-entry-date-time-comment = Time zone, automatic clock settings, and time formatting
-xdg-entry-date-time-keywords = COSMIC;Time;Zone;
+xdg-entry-date-time-keywords = Zinc;Time;Zone;
 
 xdg-entry-default-apps = Default Applications
 xdg-entry-default-apps-comment = Default web browser, mail client, file browser, and other applications
-xdg-entry-default-apps-keywords = COSMIC;Default;Application
+xdg-entry-default-apps-keywords = Zinc;Default;Application
 
 xdg-entry-desktop = Desktop
 xdg-entry-desktop-comment = Wallpaper, appearance, panel, dock, window management and workspace settings
-xdg-entry-desktop-keywords = COSMIC;Desktop;
+xdg-entry-desktop-keywords = Zinc;Desktop;
 
 xdg-entry-displays = Displays
 xdg-entry-displays-comment = Manage display configuration settings
-xdg-entry-displays-keywords = COSMIC;Display;
+xdg-entry-displays-keywords = Zinc;Display;
 
 xdg-entry-dock = Dock
 xdg-entry-dock-comment = An optional bar for apps and applets
-xdg-entry-dock-keywords = COSMIC;Dock;Panel;Applet
+xdg-entry-dock-keywords = Zinc;Dock;Panel;Applet
 
 xdg-entry-input = Input Devices
 xdg-entry-input-comment = Keyboard and mouse settings
-xdg-entry-input-keywords = COSMIC;Input;Keyboard;Mouse;Mice;
+xdg-entry-input-keywords = Zinc;Input;Keyboard;Mouse;Mice;
 
 xdg-entry-keyboard = Keyboard
 xdg-entry-keyboard-comment = Input sources, switching, special character entry, shortcuts
-xdg-entry-keyboard-keywords = COSMIC;Keyboard;Input;Source;Shortcuts;
+xdg-entry-keyboard-keywords = Zinc;Keyboard;Input;Source;Shortcuts;
 
 xdg-entry-mouse = Mouse
 xdg-entry-mouse-comment = Mouse speed, acceleration, and natural scrolling
-xdg-entry-mouse-keywords = COSMIC;Mouse;Acceleration;Scrolling;
+xdg-entry-mouse-keywords = Zinc;Mouse;Acceleration;Scrolling;
 
 xdg-entry-drawing-tablet = Drawing tablet
 xdg-entry-drawing-tablet-comment = Display mapping
-xdg-entry-drawing-tablet-keywords = COSMIC;Tablet;Drawing;Sensitivity;
+xdg-entry-drawing-tablet-keywords = Zinc;Tablet;Drawing;Sensitivity;
 
 xdg-entry-network = Network & Wireless
 xdg-entry-network-comment = Manage network connections
-xdg-entry-network-keywords = COSMIC;Network;Wireless;WiFi;VPN;
+xdg-entry-network-keywords = Zinc;Network;Wireless;WiFi;VPN;
 
 xdg-entry-notifications = Notifications
 xdg-entry-notifications-comment = Do Not Disturb, lockscreen notifications, and per-application settings
-xdg-entry-notifications-keywords = COSMIC;Notification;Lock;
+xdg-entry-notifications-keywords = Zinc;Notification;Lock;
 
 xdg-entry-panel = Panel
 xdg-entry-panel-comment = Primary system bar for menus and applets
-xdg-entry-panel-keywords = COSMIC;Panel;Applet
+xdg-entry-panel-keywords = Zinc;Panel;Applet
 
 xdg-entry-power = Power & Battery
 xdg-entry-power-comment = Power modes and power saving options
-xdg-entry-power-keywords = COSMIC;Power;Battery
+xdg-entry-power-keywords = Zinc;Power;Battery
 
 xdg-entry-region-language = Region & Language
 xdg-entry-region-language-comment = Format dates, times, and numbers based on your region
-xdg-entry-region-language-keywords = COSMIC;Region;Language;Date;Format;Time;Locale;Localization;
+xdg-entry-region-language-keywords = Zinc;Region;Language;Date;Format;Time;Locale;Localization;
 
 xdg-entry-sound = Sound
 xdg-entry-sound-comment = Audio settings for devices, alerts, and applications
-xdg-entry-sound-keywords = COSMIC;Sound;Audio;Alert;Pipewire;
+xdg-entry-sound-keywords = Zinc;Sound;Audio;Alert;Pipewire;
 
 xdg-entry-startup-apps = Startup Applications
 xdg-entry-startup-apps-comment = Configure applications which run on login
-xdg-entry-startup-apps-keywords = COSMIC;Startup;Application;
+xdg-entry-startup-apps-keywords = Zinc;Startup;Application;
 
 xdg-entry-system = System & Accounts
 xdg-entry-system-comment = System information, accounts, and firmware updates
-xdg-entry-system-keywords = COSMIC;System;Info;Accounts;Firmware;
+xdg-entry-system-keywords = Zinc;System;Info;Accounts;Firmware;
 
 xdg-entry-time-language = Time & Language
 xdg-entry-time-language-comment = Manage system date, time, region, and language
-xdg-entry-time-language-keywords = COSMIC;System;Time;Date;Region;Language;
+xdg-entry-time-language-keywords = Zinc;System;Time;Date;Region;Language;
 
 xdg-entry-touchpad = Touchpad
 xdg-entry-touchpad-comment = Touchpad speed, click options, and gestures
-xdg-entry-touchpad-keywords = COSMIC;Touchpad;Gesture;
+xdg-entry-touchpad-keywords = Zinc;Touchpad;Gesture;
 
 xdg-entry-users = Users
 xdg-entry-users-comment = Authentication and user accounts
-xdg-entry-users-keywords = COSMIC;User;Account;
+xdg-entry-users-keywords = Zinc;User;Account;
 
 xdg-entry-vpn-comment = VPN connections and connection profiles
-xdg-entry-vpn-keywords = COSMIC;VPN;Network;Connection;OpenVPN;OpenConnect;
+xdg-entry-vpn-keywords = Zinc;VPN;Network;Connection;OpenVPN;OpenConnect;
 
 xdg-entry-wallpaper = Wallpaper
 xdg-entry-wallpaper-comment = Wallpaper images, colors, and slideshow options
-xdg-entry-wallpaper-keywords = COSMIC;Wallpaper;Background;Slideshow;
+xdg-entry-wallpaper-keywords = Zinc;Wallpaper;Background;Slideshow;
 
 xdg-entry-window-management = Window Management
 xdg-entry-window-management-comment = Super key action, window control options, and additional window tiling options
-xdg-entry-window-management-keywords = COSMIC;Window;Management;Tiling;Super;Key;
+xdg-entry-window-management-keywords = Zinc;Window;Management;Tiling;Super;Key;
 
 xdg-entry-wired = Wired
 xdg-entry-wired-comment = Wired connections and connection profiles
-xdg-entry-wired-keywords = COSMIC;Wired;LAN;Network;Connection;
+xdg-entry-wired-keywords = Zinc;Wired;LAN;Network;Connection;
 
 xdg-entry-wireless = Wi-Fi
 xdg-entry-wireless-comment = Wi-Fi connections and connection profiles
-xdg-entry-wireless-keywords = COSMIC;WiFi;Wi-Fi;Network;Connection;
+xdg-entry-wireless-keywords = Zinc;WiFi;Wi-Fi;Network;Connection;
 
 xdg-entry-workspaces = Workspaces
 xdg-entry-workspaces-comment = Workspace orientation, overview, and multi-monitor behavior
-xdg-entry-workspaces-keywords = COSMIC;Workspace;Orientation;Overview;Monitor;
+xdg-entry-workspaces-keywords = Zinc;Workspace;Orientation;Overview;Monitor;
 
 xdg-entry-x11-applications = X11 Applications Compatibility
 xdg-entry-x11-applications-comment = X11 window system application scaling, primary display, and global shortcuts
-xdg-entry-x11-applications-keywords = COSMIC;X11;Application;Game;Compatibility;
+xdg-entry-x11-applications-keywords = Zinc;X11;Application;Game;Compatibility;
 
 ## Network & Wireless
 
@@ -406,7 +406,7 @@ frosted = Frosted glass effect on system interface
     .desc = Applies background blur to panel, dock, applets, launcher, and application library
 
 enable-export = Apply current theme to GNOME apps
-    .desc = Not all toolkits support auto-switching. Non-COSMIC apps may need to be restarted after a theme change.
+    .desc = Not all toolkits support auto-switching. Non-Zinc apps may need to be restarted after a theme change.
 
 icon-theme = Icon theme
     .desc = Applies a different set of icons to applications

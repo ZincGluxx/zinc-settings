@@ -1,4 +1,4 @@
-app = COSMIC Stillingar
+app = Zinc Stillingar
 cancel = Hætta við
 confirm = Staðfesta
 export = Flytja út

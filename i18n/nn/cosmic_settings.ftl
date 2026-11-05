@@ -1,4 +1,4 @@
-app = COSMIC Innstillingar
+app = Zinc Innstillingar
 cancel = Avbryt
 close = Lukk
 dbus-connection-error = Klara ikkje å kobla til DBus

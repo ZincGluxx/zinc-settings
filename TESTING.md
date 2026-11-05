@@ -1,6 +1,6 @@
 # Testing
 
-This document provides a regression testing checklist for COSMIC Settings and the COSMIC Settings Daemon. The checklist provides a starting point for Quality Assurance reviews.
+This document provides a regression testing checklist for Zinc Settings and the Zinc Settings Daemon. The checklist provides a starting point for Quality Assurance reviews.
 
 ## Checklist
 
@@ -25,7 +25,7 @@ This document provides a regression testing checklist for COSMIC Settings and th
 
 #### Appearance
 
-- [ ] Open a COSMIC app and a GNOME app. When switching between Dark and Light mode, the COSMIC app switches immediately, and the GNOME app switches after restarting.
+- [ ] Open a Zinc app and a GNOME app. When switching between Dark and Light mode, the Zinc app switches immediately, and the GNOME app switches after restarting.
 - [ ] Changing the accent color works.
 - [ ] Changing the roundness style works and does not affect other aspects of the theme (e.g. color mode).
 - [ ] Changing the interface density works.

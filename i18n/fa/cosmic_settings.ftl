@@ -1,4 +1,4 @@
-app = تنظیمات COSMIC
+app = تنظیمات Zinc
 unknown = نامشخص
 number = { $number }
 
@@ -9,7 +9,7 @@ desktop = میزکار
 ## Desktop: Appearance
 
 appearance = ظاهر
-    .desc = رنگ‌های تاکیدی و تم COSMIC.
+    .desc = رنگ‌های تاکیدی و تم Zinc.
 
 ## Desktop: Notifications
 
